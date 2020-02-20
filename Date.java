@@ -4,30 +4,31 @@
 public class Date {
     
     // Instance Variables
-    private int day;
-    private int month;
-    private int year;
+    public int day;
+    public int month;
+    public int year;
+    String event;
 
     // Default Constructor (No Parameters)
     public Date(){
-        //Your code here
+        event = "Nothing on Today";
     }
 
     // Parameterized constructor (3 Parameters)
-    public Date(int newDay, int newMonth, int newYear){
-        // Your code here.
+    public Date(int day, int month, int year){
+        this.day = day;
+        this.month = month;
+        this.year = year;
     }
-    
-    // Parameterized constructor (2 Parameters)
-    // Your code here.
-    
-    // Parameterized constructor (1 Parameter)
-    // Your code here.
+
+    public Date(int day, int month, int year, String event){
+        this(day,month,year);
+        this.event = event;
+    }
     
     // A simple print method
     public void printDate(){
         // Print the date like this: day/month/year
-        // Your code here
+        System.out.println(day+" / "+month+" / "+year+". "+event);
     }
-
 }
